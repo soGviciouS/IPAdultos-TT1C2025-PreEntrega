@@ -92,7 +92,6 @@ while option != "5":
             print("Eliminar un producto")
             try:
                 string_search = int(input("Ingrese el nro. del producto a eliminar (número): "))
-                # for product in arr_products:
                 if arr_products.index(product) == (string_search - 1):
                     print(f" \
                         Producto encontrado: \n \
