@@ -80,7 +80,7 @@ while option != "5":
             for product in arr_products:
                 if string_search.lower() in product['nombre'].lower():
                     print(f" \
-                        Producto encontrado: \n \
+                        Producto encontrado #{arr_products.index(product) + 1}: \n \
                         - Nombre: {product['nombre']}\n \
                         - Categoría: {product['categoria']}\n \
                         - Precio: {product['precio']} \n \
