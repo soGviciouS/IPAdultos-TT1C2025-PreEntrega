@@ -5,12 +5,12 @@ arr_products = []
 option = ""
 
 ### Ejemplo de producto para pruebas
-#product = {
-#    "nombre": "Nombre del producto ejemplo",
-#    "categoria": "Categoria del producto ejemplo",
-#    "precio": 2
-#}
-#arr_products.append(product)
+# product = {
+#     "nombre": "Nombre del producto ejemplo",
+#     "categoria": "Categoria del producto ejemplo",
+#     "precio": 2     
+# }
+# arr_products.append(product)
 
 
 ### Inicio del programa
@@ -90,32 +90,27 @@ while option != "5":
             os.system('cls||clear')
         case "4":
             print("Eliminar un producto")
-            continue_input = "s"
-            while continue_input == "s":
-                try:
-                    string_search = int(input("Ingrese el nro. del producto a eliminar (número): "))
-                    for product in arr_products:
-                        if arr_products.index(product) == (string_search - 1):
-                            print(f" \
-                                Producto encontrado: \n \
-                                - Nombre: {product['nombre']}\n \
-                                - Categoría: {product['categoria']}\n \
-                                - Precio: {product['precio']} \n \
-                                #######################\n"
-                            )
-                            confirm = input("¿Está seguro de que desea eliminar este producto? (s/n): ").lower()
-                            if confirm == 's':
-                                # arr_products.pop(string_search - 1)
-                                arr_products.remove(product)
-                                print("Producto eliminado exitosamente.")
-                            break
-                        else:
-                            print("Producto no encontrado.")
-                            break
+            try:
+                string_search = int(input("Ingrese el nro. del producto a eliminar (número): "))
+                # for product in arr_products:
+                if arr_products.index(product) == (string_search - 1):
+                    print(f" \
+                        Producto encontrado: \n \
+                        - Nombre: {product['nombre']}\n \
+                        - Categoría: {product['categoria']}\n \
+                        - Precio: {product['precio']} \n \
+                        #######################\n"
+                    )
+                    confirm = input("¿Está seguro de que desea eliminar este producto? (s/n): ").lower()
+                    if confirm == 's':
+                        # arr_products.pop(string_search - 1)
+                        arr_products.remove(product)
+                        print("Producto eliminado exitosamente.")
                     continue_input = "n"
-                except:
-                    print("Ingreso inválido. Verifique el tipo de dato ingresado. Intente de nuevo. \n")
-                    continue_input = "s"
+                else:
+                    print("Producto no encontrado.")
+            except:
+                print("Ingreso inválido. Verifique el tipo de dato ingresado. Intente de nuevo. \n")
             input("Presione Enter para continuar...")
             os.system('cls||clear')
         case "5":
