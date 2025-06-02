@@ -60,7 +60,6 @@ while option != "5":
             os.system('cls||clear')
         case "2":
             print("Mostrar un producto")
-            acum = 1
             for product in arr_products:
                 print(f" \
                     Producto {arr_products.index(product) + 1}: \n \
@@ -69,7 +68,6 @@ while option != "5":
                     - Precio: {product['precio']} \n \
                     #######################\n"
                 )
-                acum += 1
             if (arr_products == []):
                 print("No hay productos para mostrar.")
             input("Presione Enter para continuar...")
