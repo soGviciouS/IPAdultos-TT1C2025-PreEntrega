@@ -84,7 +84,6 @@ while option != "5":
                         - Precio: {product['precio']} \n \
                         #######################\n"
                     )
-                    break
                 else:
                     print("Producto no encontrado.")
             input("Presione Enter para continuar...")
