@@ -106,7 +106,6 @@ while option != "5":
                         # arr_products.pop(string_search - 1)
                         arr_products.remove(product)
                         print("Producto eliminado exitosamente.")
-                    continue_input = "n"
                 else:
                     print("Producto no encontrado.")
             except:
