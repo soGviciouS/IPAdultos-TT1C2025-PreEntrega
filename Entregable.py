@@ -54,10 +54,14 @@ while option != "5":
                         "precio": productPrice
                     }
                     arr_products.append(product)
+                    print("Producto agregado exitosamente.")
                     continue_input = input("¿Desea agregar otro producto? (s/n): ").lower()
+                    if continue_input != "s":
+                        continue_input = "n"
+                        input("Presione Enter para continuar...")
+                    os.system('cls||clear')
                 except ValueError as e:
                     print(e, "Intente de nuevo. \n")
-            os.system('cls||clear')
         case "2":
             print("Mostrar un producto")
             for product in arr_products:
