@@ -72,7 +72,7 @@ while option != "5":
                     - Precio: {product['precio']} \n \
                     #######################\n"
                 )
-            if (arr_products == []):
+            if arr_products == []:
                 print("No hay productos para mostrar.")
             input("Presione Enter para continuar...")
             os.system('cls||clear')
